@@ -53,7 +53,7 @@ for w in range(53):
 for idx, label in [(1, "Mon"), (3, "Wed"), (5, "Fri")]:
     svg.append(f'<text x="8" y="{TOP + idx*PITCH + 9}" fill="{TEXT}" font-size="9" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">{label}</text>')
 
-svg.append(f'<text x="22" y="{H-18}" fill="{TEXT}" font-size="11" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">Public GitHub activity intensity · refreshed daily</text>')
+svg.append(f'<text x="22" y="{H-18}" fill="{TEXT}" font-size="11" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">GitHub activity intensity · public + anonymized private · refreshed daily</text>')
 svg.append("</svg>")
 OUT.write_text("\n".join(svg), encoding="utf-8")
 print("Rendered contrib-heatmap.svg")
