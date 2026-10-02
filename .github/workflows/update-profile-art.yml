@@ -1,6 +1,11 @@
 name: Update profile art
 
 on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/update-profile-art.yml"
+      - "scripts/**"
   schedule:
     - cron: "17 6 * * *"
   workflow_dispatch:
