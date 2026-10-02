@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 jobs:
-  heatmap:
+  profile-art:
     runs-on: ubuntu-latest
     steps:
       - name: Check out profile repo
@@ -28,19 +28,20 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Refresh contribution data
+      - name: Generate live profile art
         run: |
           python scripts/fetch_contributions.py
           python scripts/render_heatmap_svg.py
+          python scripts/render_ascii_avatar.py
 
       - name: Commit refreshed profile art
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/contributions.json contrib-heatmap.svg
+          git add data/contributions.json contrib-heatmap.svg taha-ascii.svg
           if git diff --cached --quiet; then
             echo "No profile changes"
           else
-            git commit -m "chore: refresh contribution graph [skip ci]"
+            git commit -m "chore: refresh animated profile art [skip ci]"
             git push
           fi
