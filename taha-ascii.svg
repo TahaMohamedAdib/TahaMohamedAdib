@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="610" height="360" viewBox="0 0 610 360">
+<rect width="610" height="360" rx="18" fill="#0d1117" stroke="#30363d"/>
+<defs>
+<clipPath id="m0"><rect x="22" y="22" width="0" height="26"><animate attributeName="width" from="0" to="560" dur="0.7s" begin="0.00s" fill="freeze"/></rect></clipPath>
+<clipPath id="m1"><rect x="22" y="47" width="0" height="26"><animate attributeName="width" from="0" to="560" dur="0.7s" begin="0.10s" fill="freeze"/></rect></clipPath>
+<clipPath id="m2"><rect x="22" y="72" width="0" height="26"><animate attributeName="width" from="0" to="560" dur="0.7s" begin="0.20s" fill="freeze"/></rect></clipPath>
+<clipPath id="m3"><rect x="22" y="97" width="0" height="26"><animate attributeName="width" from="0" to="560" dur="0.7s" begin="0.30s" fill="freeze"/></rect></clipPath>
+<clipPath id="m4"><rect x="22" y="122" width="0" height="26"><animate attributeName="width" from="0" to="560" dur="0.7s" begin="0.40s" fill="freeze"/></rect></clipPath>
+<clipPath id="m5"><rect x="22" y="147" width="0" height="26"><animate attributeName="width" from="0" to="560" dur="0.7s" begin="0.50s" fill="freeze"/></rect></clipPath>
+<clipPath id="m6"><rect x="22" y="172" width="0" height="26"><animate attributeName="width" from="0" to="560" dur="0.7s" begin="0.60s" fill="freeze"/></rect></clipPath>
+<clipPath id="m7"><rect x="22" y="197" width="0" height="26"><animate attributeName="width" from="0" to="560" dur="0.7s" begin="0.70s" fill="freeze"/></rect></clipPath>
+<clipPath id="m8"><rect x="22" y="222" width="0" height="26"><animate attributeName="width" from="0" to="560" dur="0.7s" begin="0.80s" fill="freeze"/></rect></clipPath>
+<clipPath id="m9"><rect x="22" y="247" width="0" height="26"><animate attributeName="width" from="0" to="560" dur="0.7s" begin="0.90s" fill="freeze"/></rect></clipPath>
+<clipPath id="m10"><rect x="22" y="272" width="0" height="26"><animate attributeName="width" from="0" to="560" dur="0.7s" begin="1.00s" fill="freeze"/></rect></clipPath>
+</defs>
+<text x="22" y="42" clip-path="url(#m0)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700" fill="#58a6ff" xml:space="preserve">████████╗ █████╗ ██╗  ██╗ █████╗ </text>
+<text x="22" y="67" clip-path="url(#m1)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700" fill="#58a6ff" xml:space="preserve">╚══██╔══╝██╔══██╗██║  ██║██╔══██╗</text>
+<text x="22" y="92" clip-path="url(#m2)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700" fill="#58a6ff" xml:space="preserve">   ██║   ███████║███████║███████║</text>
+<text x="22" y="117" clip-path="url(#m3)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700" fill="#58a6ff" xml:space="preserve">   ██║   ██╔══██║██╔══██║██╔══██║</text>
+<text x="22" y="142" clip-path="url(#m4)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700" fill="#58a6ff" xml:space="preserve">   ██║   ██║  ██║██║  ██║██║  ██║</text>
+<text x="22" y="167" clip-path="url(#m5)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700" fill="#58a6ff" xml:space="preserve">   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝</text>
+<text x="22" y="217" clip-path="url(#m7)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="19" font-weight="700" fill="#c9d1d9">   MOHAMED ADIB</text>
+<text x="22" y="267" clip-path="url(#m9)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="19" font-weight="700" fill="#c9d1d9">   Data Science &amp; AI</text>
+<text x="22" y="292" clip-path="url(#m10)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="19" font-weight="700" fill="#c9d1d9">   Building intelligent software</text>
+</svg>
