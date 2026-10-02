@@ -30,21 +30,21 @@ svg = [
     f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
     f'<rect width="{W}" height="{H}" rx="16" fill="{BG}" stroke="{BORDER}" stroke-width="1.5"/>',
     '<style>@keyframes reveal{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}.d{animation:reveal .28s ease-out both}</style>',
-    f'<text x="22" y="24" fill="{BRIGHT}" font-size="13" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">TahaMohamedAdib / contributions</text>'
+    f'<text x="22" y="24" fill="{BRIGHT}" font-size="13" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">TahaMohamedAdib / contribution activity</text>'
 ]
 
 seen_months = set()
 for w in range(53):
     for dow in range(7):
         d = start + timedelta(days=w * 7 + dow)
-        item = items.get(d, {"count": 0, "level": 0})
-        lv = max(0, min(4, int(item.get("level", 0) or 0)))
+        item = items.get(d, {"level": 0})
+        level = max(0, min(4, int(item.get("level", 0) or 0)))
         x, y = LEFT + w * PITCH, TOP + dow * PITCH
         delay = 0.012 * (w + dow)
         svg.append(
             f'<rect class="d" x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" '
-            f'fill="{PALETTE[lv]}" style="animation-delay:{delay:.3f}s">'
-            f'<title>{escape(d.isoformat())}: {int(item.get("count",0) or 0)} contributions</title></rect>'
+            f'fill="{PALETTE[level]}" style="animation-delay:{delay:.3f}s">'
+            f'<title>{escape(d.isoformat())}: activity level {level}/4</title></rect>'
         )
         if d.day <= 7 and d.month not in seen_months and dow == 0:
             seen_months.add(d.month)
@@ -53,9 +53,7 @@ for w in range(53):
 for idx, label in [(1, "Mon"), (3, "Wed"), (5, "Fri")]:
     svg.append(f'<text x="8" y="{TOP + idx*PITCH + 9}" fill="{TEXT}" font-size="9" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">{label}</text>')
 
-stats = payload.get("stats", {})
-footer = f'{stats.get("total",0):,} contributions · current streak {stats.get("current_streak",0)}d · longest {stats.get("longest_streak",0)}d'
-svg.append(f'<text x="22" y="{H-18}" fill="{TEXT}" font-size="11" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">{escape(footer)}</text>')
+svg.append(f'<text x="22" y="{H-18}" fill="{TEXT}" font-size="11" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">Public GitHub activity intensity · refreshed daily</text>')
 svg.append("</svg>")
 OUT.write_text("\n".join(svg), encoding="utf-8")
 print("Rendered contrib-heatmap.svg")
